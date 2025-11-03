@@ -1,9 +1,9 @@
 #ifndef ONE_HPP
 #define ONE_HPP
+#include <array>
+#include <cmath>
 #include <iostream>
 #include <string>
-#include <array>
-#include <cmath> 
 
 void say_hello(std::string name);
 int mulitplyInteger(int a, int b);
@@ -22,5 +22,9 @@ int revertNumber(int number);
 bool isLeapYear(int year);
 
 int findSmallestInt(int numbers[], int size);
+
+int findSmallestIntV2(int* numbers[], int size);
+
+void swapValues(int& a, int& b);
 
 #endif

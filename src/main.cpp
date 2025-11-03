@@ -44,12 +44,32 @@ int main() {
   std::cin >> year;
   std::cout << year << (isLeapYear(year) ? " is " : " isn't ") << "a leap year."
             << std::endl;
-  int  numbersList[5] {1, 2, 0, 5, 11};
+
+  // Job 9
+  int numbersList[5]{1, 2, 0, 5, 11};
   std::cout << "The list is : ";
   for (int i = 0; i < 5; i++) {
     std::cout << numbersList[i] << " ";
   }
-        
-  std::cout << "The smallest number is : " << findSmallestInt(numbersList, 5) << std::endl;
+
+  std::cout << "The smallest number is : " << findSmallestInt(numbersList, 5)
+            << std::endl;
+
+  // Job 10
+  int a1{5}, b1{2}, c1{8}, d1{1}, e1{3};
+  int* numbersListV2[5]{&a1, &b1, &c1, &d1, &e1};
+  std::cout << "The list is : ";
+  for (int i = 0; i < 5; i++) {
+    std::cout << *numbersListV2[i] << " ";
+  }
+
+  std::cout << "The smallest number is : "
+            << findSmallestIntV2(numbersListV2, 5) << std::endl;
+
+  // Job 5
+  int a2 = 456;
+  int b2 = 789;
+  swapInteger(a2, b2);
+
   return 0;
 }
