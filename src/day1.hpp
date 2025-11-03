@@ -19,4 +19,8 @@ float getTaxesIncludedPrice(float priceWithoutTaxes, int taxesInPercentage);
 
 int revertNumber(int number);
 
+bool isLeapYear(int year);
+
+int findSmallestInt(int numbers[], int size);
+
 #endif
