@@ -40,3 +40,9 @@ void swapInteger(int& a, int& b) {
     b = temp;
     std::cout << "AFTER SWAP : a = " << a << "  b = " << b << std::endl;
 }
+
+float getTaxesIncludedPrice(float priceWithoutTaxes, int taxesInPercentage) {
+    float finalPrice = priceWithoutTaxes + priceWithoutTaxes * (static_cast<float>(taxesInPercentage) / 100);
+    finalPrice = std::round(finalPrice * 100.0f) / 100.0f;
+    return finalPrice;
+}

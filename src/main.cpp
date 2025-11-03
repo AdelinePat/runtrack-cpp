@@ -23,5 +23,11 @@ int main() {
     int b = 321;
     swapInteger(a, b);
 
+    //Job 6
+    std::cout << "Enter the price of whatever here :" << std::endl;
+    float priceWithoutTaxes{0};
+    std::cin >> priceWithoutTaxes;
+    std::cout << "final price is : " << getTaxesIncludedPrice(priceWithoutTaxes, 15) << "€" << std::endl;
+
     return 0;
 }
