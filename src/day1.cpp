@@ -60,35 +60,49 @@ bool isLeapYear(int year) {
   // bool isLeap{false};
   if (year % 4 == 0) {
     if (year % 100 != 0 || year % 400 == 0) {
-    //   isLeap = true;
-    return true;
+      //   isLeap = true;
+      return true;
     }
   }
   return false;
 }
 
 int findSmallestInt(int numbers[], int size) {
-    // << "The list is : " << numbersList << "
-    int smallest = numbers[0];
-    for (int i = 0; i < size; ++i) {
-        if (smallest > numbers[i]) {
-            smallest = numbers[i];
-        }
+  // << "The list is : " << numbersList << "
+  int smallest = numbers[0];
+  for (int i = 0; i < size; ++i) {
+    if (smallest > numbers[i]) {
+      smallest = numbers[i];
     }
-    return smallest;
+  }
+  return smallest;
 }
 
 int findSmallestIntV2(int* numbers[], int size) {
-    // << "The list is : " << numbersList << "
-    int smallest = *numbers[0];
-    for (int i = 0; i < size; ++i) {
-        if (smallest > *numbers[i]) {
-            smallest = *numbers[i];
-        }
+  // << "The list is : " << numbersList << "
+  int smallest = *numbers[0];
+  for (int i = 0; i < size; ++i) {
+    if (smallest > *numbers[i]) {
+      smallest = *numbers[i];
     }
-    return smallest;
+  }
+  return smallest;
 }
 
-void swapValues(int& a, int& b) {
-    swapInteger(a, b);
+void swapValues(int& a, int& b) { swapInteger(a, b); }
+
+int doubleArray(int numbers[], int size) {
+  int sum{0};
+  for (int i{0}; i < size; ++i) {
+    numbers[i] *= 2;
+    sum += numbers[i];
+  }
+  return sum;
+}
+
+void printArray(int numbers[], int size) {
+  for (int i{0}; i < size; ++i) {
+    std::cout << numbers[i] << " - ";
+  }
+  std::cout << std::endl;
 }

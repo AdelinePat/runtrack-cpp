@@ -27,4 +27,7 @@ int findSmallestIntV2(int* numbers[], int size);
 
 void swapValues(int& a, int& b);
 
+int doubleArray(int numbers[], int size);
+void printArray(int numbers[], int size);
+
 #endif

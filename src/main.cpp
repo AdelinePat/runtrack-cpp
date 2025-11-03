@@ -71,5 +71,10 @@ int main() {
   int b2 = 789;
   swapInteger(a2, b2);
 
+  printArray(numbersList, 5);
+  int doubleArraySum{doubleArray(numbersList, 5)};
+  std::cout << "sum is : " << doubleArraySum << std::endl;
+  printArray(numbersList, 5);
+
   return 0;
 }
