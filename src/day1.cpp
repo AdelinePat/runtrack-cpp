@@ -71,8 +71,8 @@ int findSmallestInt(int numbers[], int size) {
     // << "The list is : " << numbersList << "
     int smallest = numbers[0];
     for (int i = 0; i < size; ++i) {
-        if (i+1 <= size && smallest > numbers[i + 1]) {
-            smallest = numbers[i + 1];
+        if (smallest > numbers[i]) {
+            smallest = numbers[i];
         }
     }
     return smallest;
