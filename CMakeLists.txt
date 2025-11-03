@@ -7,4 +7,6 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Add executable from source files
-add_executable(hello src/main.cpp)
+add_executable(hello 
+    src/main.cpp
+    src/day1.cpp)
