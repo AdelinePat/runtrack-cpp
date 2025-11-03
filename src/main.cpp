@@ -29,5 +29,11 @@ int main() {
     std::cin >> priceWithoutTaxes;
     std::cout << "final price is : " << getTaxesIncludedPrice(priceWithoutTaxes, 15) << "€" << std::endl;
 
+    //Job 7
+    std::cout << "Enter a number to revert" << std::endl;
+    int number{0};
+    std::cin >> number;
+    std::cout << "Your reversed number is : " << revertNumber(number) << std::endl;
+
     return 0;
 }

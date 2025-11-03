@@ -46,3 +46,13 @@ float getTaxesIncludedPrice(float priceWithoutTaxes, int taxesInPercentage) {
     finalPrice = std::round(finalPrice * 100.0f) / 100.0f;
     return finalPrice;
 }
+
+int revertNumber(int number) {
+    int reversed = 0;
+    while (number > 0) {
+        int digit = number % 10;
+        reversed = reversed * 10 + digit;
+        number = number / 10;   
+    }
+    return reversed;
+}

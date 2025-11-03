@@ -17,4 +17,6 @@ void swapInteger(int& a, int& b);
 
 float getTaxesIncludedPrice(float priceWithoutTaxes, int taxesInPercentage);
 
+int revertNumber(int number);
+
 #endif
