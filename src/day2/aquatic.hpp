@@ -1,13 +1,18 @@
 #ifndef AQUATIC
 #define AQUATIC
+
 #include <iostream>
 #include <string>
 
 class Aquatic {
- protected:
-  void swim();
-  double getSpeed();
-  void setSpeed(double newSpeed);
+ public:
+  virtual void swim();
+
+  double getSwimmingSpeed();
+  void setSwimmingSpeed(double newSpeed);
+
+ private:
+  double speed{2.0};  // m/s
 };
 
 #endif

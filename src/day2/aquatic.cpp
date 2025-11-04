@@ -1,13 +1,8 @@
-// #include <iostream>
 #include "aquatic.hpp"
 using namespace std;
 
-class Aquatic::Aquatic {
- private:
-  double speed{2};  // m/s
-
- protected:
-  void Aquatic::swim() {}
-  double Aquatic::getSpeed() { return this->speed; }
-  void Aquatic::setSpeed(double newSpeed) { this->speed = newSpeed; }
-};
+void Aquatic::swim() {
+  std::cout << "Swims at " << this->speed << " m/s" << std::endl;
+}
+double Aquatic::getSwimmingSpeed() { return this->speed; }
+void Aquatic::setSwimmingSpeed(double newSpeed) { this->speed = newSpeed; }

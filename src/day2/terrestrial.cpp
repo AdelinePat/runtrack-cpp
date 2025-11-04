@@ -1,12 +1,8 @@
-#include <iostream>
+#include "terrestrial.hpp"
 using namespace std;
 
-class Terrestrial {
- private:
-  double speed{2};  // m/s
-
- protected:
-  void walk() {}
-  double getSpeed() { return this->speed; }
-  void setSpeed(double newSpeed) { this->speed = newSpeed; }
-};
+void Terrestrial::walk() {
+  std::cout << "Walks at " << this->speed << " m/s" << std::endl;
+}
+double Terrestrial::getWalkingSpeed() { return this->speed; }
+void Terrestrial::setWalkingSpeed(double newSpeed) { this->speed = newSpeed; }

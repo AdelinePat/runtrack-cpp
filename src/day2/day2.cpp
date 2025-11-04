@@ -1,3 +1,8 @@
+#include "day2.hpp"
 int main() {
-    return 0;
+  Penguin* firstPengin = new Penguin("Roger");
+  firstPengin->presentYourself();
+  firstPengin->walk();
+  firstPengin->swim();
+  return 0;
 }

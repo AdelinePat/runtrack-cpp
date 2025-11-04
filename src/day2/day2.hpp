@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 
+#include "penguin.hpp"
 int main();
 
 #endif
