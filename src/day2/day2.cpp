@@ -6,16 +6,23 @@ int main() {
   firstPengin->walk();
   firstPengin->swim();
 
-  shared_ptr<Penguin> secondPenguin = std::make_shared<Penguin>(firstPengin.get());
+  shared_ptr<Penguin> secondPenguin =
+      std::make_shared<Penguin>(firstPengin.get());
   secondPenguin->setName("Albert");
   secondPenguin->registerInColony();
-
-//   firstPengin->presentYourself();
-//   secondPenguin->presentYourself();
+  shared_ptr<Penguin> thirdPenguin =
+      std::make_shared<Penguin>(secondPenguin.get());
+  thirdPenguin->setName("Albert Jr");
+  thirdPenguin->registerInColony();
+  shared_ptr<Penguin> fourthPenguin = std::make_shared<Penguin>("Noname");
+  fourthPenguin->registerInColony();
+  //   firstPengin->presentYourself();
+  //   secondPenguin->presentYourself();
+  fourthPenguin->destroy();
 
   for (std::shared_ptr<Penguin> penguin : Penguin::colony) {
     penguin->presentYourself();
   }
-
+  std::cout << "test" << std::endl;
   return 0;
 }

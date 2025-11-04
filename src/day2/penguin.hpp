@@ -24,6 +24,7 @@ class Penguin : public Aquatic,
   void setName(std::string newName);
   double getSlidingSpeed();
   void setSlidingSpeed(double newSpeed);
+  void destroy();
 
  private:
   std::string name{"Unknown"};

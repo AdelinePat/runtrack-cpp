@@ -1,4 +1,5 @@
 #include "penguin.hpp"
+
 #include <algorithm>
 using namespace std;
 
@@ -10,14 +11,7 @@ Penguin::Penguin(Penguin* penguin)
     : Aquatic(), Terrestrial(), name(penguin->getName()) {}
 
 Penguin::~Penguin() {
-    Penguin::colony.erase(
-        std::remove_if(
-            Penguin::colony.begin(),
-            Penguin::colony.end(),
-            [this](const std::shared_ptr<Penguin>& p) { return p.get() == this; }
-        ),
-        Penguin::colony.end()
-    );
+  std::cout << "destructor called for " << this->getName() << std::endl;
 }
 
 void Penguin::registerInColony() {
@@ -45,3 +39,14 @@ void Penguin::setName(std::string newName) { this->name = newName; }
 double Penguin::getSlidingSpeed() { return this->slidingSpeed; }
 
 void Penguin::setSlidingSpeed(double newSpeed) {}
+
+void Penguin::destroy() {
+  std::shared_ptr<Penguin> self = shared_from_this();
+  Penguin::colony.erase(
+      std::remove_if(Penguin::colony.begin(), Penguin::colony.end(),
+                     [this](const std::shared_ptr<Penguin>& p) {
+                       return p.get() == this;
+                     }),
+      Penguin::colony.end());
+  self.reset();
+}
