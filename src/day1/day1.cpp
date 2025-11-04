@@ -106,3 +106,42 @@ void printArray(int numbers[], int size) {
   }
   std::cout << std::endl;
 }
+
+std::array<int, 10> finobacci(int n) {
+  int iterator{0};
+  std::array<int, 2> finobacciTemp{0, 1};
+  std::array<int, 10> finobacci;
+  while (n > iterator) {
+    int result = finobacciTemp.at(0) + finobacciTemp.at(1);
+
+    if (iterator >= n - 10) {
+      finobacci.at(iterator + 10 - n) = result;
+    }
+    finobacciTemp.at(0) = finobacciTemp.at(1);
+    finobacciTemp.at(1) = result;
+    iterator += 1;
+  }
+  return finobacci;
+}
+
+bool hasEvenBits(uint32_t n) {
+  int count = 0;
+  while (n > 0) {
+    if (n & 1u)  // check the lowest bit 1 & is the bitwise operator not && !!!
+                 // check if the least significant bit is == to 1
+      ++count;
+    n >>= 1;  // shift right to check next bit ex: 1011 , will become 0101
+  }
+  return (count % 2 == 0);
+}
+
+long cube(int value) {
+  long cube{0};
+  int n{5};
+  while (n <= value) {
+    cube += std::pow(n, 3);
+    n++;
+  }
+  return cube;
+}
+

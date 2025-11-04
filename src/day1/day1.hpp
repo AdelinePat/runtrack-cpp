@@ -2,6 +2,7 @@
 #define ONE_HPP
 #include <array>
 #include <cmath>
+#include <cstdint>
 #include <iostream>
 #include <string>
 
@@ -29,5 +30,11 @@ void swapValues(int& a, int& b);
 
 int doubleArray(int numbers[], int size);
 void printArray(int numbers[], int size);
+
+std::array<int, 10> finobacci(int n);
+
+bool hasEvenBits(uint32_t n);
+
+long cube(int value);
 
 #endif
