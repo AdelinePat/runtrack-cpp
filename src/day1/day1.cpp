@@ -144,3 +144,4 @@ long cube(int value) {
   }
   return cube;
 }
+

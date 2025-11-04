@@ -1,6 +1,6 @@
 #include "main.hpp"
 
-#include "day1.hpp"
+#include "day1/day1.hpp"
 
 int main() {
   // std::string name = "Florence";
@@ -95,8 +95,10 @@ int main() {
 
   // Job 14
   int numberOfCube = 7;
-  // long cubeResult = cube(numberOfCube);
   std::cout << "addition of cube from 5 to " << numberOfCube << " is "
             << cube(numberOfCube) << std::endl;
+
+  // Job 15
+
   return 0;
 }
