@@ -44,6 +44,10 @@ void Penguin::registerInColony() {
 
 void Penguin::presentYourself() {
   std::cout << "My name is " << this->name << "." << std::endl;
+  std::cout << "I'm walking at " << this->getWalkingSpeed() << "m/s." << std::endl;
+  std::cout << "I'm swimming at " << this->getSwimmingSpeed() << "m/s." << std::endl;
+  std::cout << "I'm sliding at " << this->getSlidingSpeed() << "m/s." << std::endl;
+  std::cout << std::endl;
 }
 
 void Penguin::swim() {
