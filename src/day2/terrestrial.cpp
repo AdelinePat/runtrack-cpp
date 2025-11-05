@@ -1,6 +1,10 @@
 #include "terrestrial.hpp"
 using namespace std;
 
+Terrestrial::Terrestrial() : speed(2.0) {}
+
+Terrestrial::Terrestrial(double speed) : speed(speed) {}
+
 void Terrestrial::walk() {
   std::cout << "Walks at " << this->speed << " m/s" << std::endl;
 }

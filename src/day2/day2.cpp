@@ -18,11 +18,19 @@ int main() {
   fourthPenguin->registerInColony();
   //   firstPengin->presentYourself();
   //   secondPenguin->presentYourself();
-  fourthPenguin->destroy();
+  fourthPenguin->removeFromColony();
+  fourthPenguin.reset();
 
   for (std::shared_ptr<Penguin> penguin : Penguin::colony) {
     penguin->presentYourself();
   }
   std::cout << "test" << std::endl;
+
+  Penguin::displayNameAndTime(firstPengin.get(), MovementType::Slide, 15.0);
+  Penguin::displayNameAndTime(secondPenguin.get(), MovementType::Walk, 20.0);
+  Penguin::displayNameAndTime(thirdPenguin.get(), MovementType::Swim, 50.0);
+  Penguin::displayNameAndTime(firstPengin.get(), MovementType::Walk, 15.0);
+
+
   return 0;
 }

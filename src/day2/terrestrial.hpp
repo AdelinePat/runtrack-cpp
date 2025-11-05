@@ -3,6 +3,8 @@ using namespace std;
 
 class Terrestrial {
  public:
+  Terrestrial();
+  Terrestrial(double speed);
   virtual void walk();
   double getWalkingSpeed();
   void setWalkingSpeed(double newSpeed);

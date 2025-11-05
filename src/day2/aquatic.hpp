@@ -6,6 +6,9 @@
 
 class Aquatic {
  public:
+  Aquatic();
+  Aquatic(double speed);
+  
   virtual void swim();
 
   double getSwimmingSpeed();
