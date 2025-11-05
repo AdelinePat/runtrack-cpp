@@ -29,6 +29,8 @@ void Penguin::displayNameAndTime(Penguin* penguin, MovementType type,
 
 Penguin::Penguin(std::string name) : name(name) {}
 
+Penguin::Penguin(std::string name, double swimSpeed, double walkSpeed) : name(name), Aquatic(swimSpeed), Terrestrial(walkSpeed) {}
+
 Penguin::Penguin(Penguin* penguin)
     : Aquatic(penguin->getSwimmingSpeed()), Terrestrial(penguin->getWalkingSpeed()), name(penguin->getName()) {}
 

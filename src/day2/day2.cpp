@@ -1,6 +1,8 @@
 #include "day2.hpp"
 int main() {
-  shared_ptr<Penguin> firstPengin = std::make_shared<Penguin>("Roger");
+  // swim speed for a penguin 5 ~ 7 m/s
+  // walk speed for a penguin ~  1,08 m/s.
+  shared_ptr<Penguin> firstPengin = std::make_shared<Penguin>("Roger", 6.0, 1.2);
   firstPengin->registerInColony();
   firstPengin->presentYourself();
   firstPengin->walk();
@@ -9,10 +11,12 @@ int main() {
   shared_ptr<Penguin> secondPenguin =
       std::make_shared<Penguin>(firstPengin.get());
   secondPenguin->setName("Albert");
+  secondPenguin->setWalkingSpeed(1.1);
   secondPenguin->registerInColony();
   shared_ptr<Penguin> thirdPenguin =
       std::make_shared<Penguin>(secondPenguin.get());
   thirdPenguin->setName("Albert Jr");
+  thirdPenguin->setSwimmingSpeed(7.0);
   thirdPenguin->registerInColony();
   shared_ptr<Penguin> fourthPenguin = std::make_shared<Penguin>("Noname");
   fourthPenguin->registerInColony();

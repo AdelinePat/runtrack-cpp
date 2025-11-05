@@ -18,6 +18,7 @@ class Penguin : public Aquatic,
                                  double distance);
 
   Penguin(std::string name);
+  Penguin(std::string name, double swimSpeed, double walkSpeed);
   Penguin(Penguin* penguin);
   ~Penguin();
   void registerInColony();
